@@ -1,0 +1,30 @@
+#1 Write a Python program to write a text file "lines.txt" with 100 lines
+
+with open ("lines.txt","w") as f:
+    for txt in  range(1,101):
+        f.write("Line NO.: "+str(txt) )
+        f.write("\n")
+        
+        
+        
+#2 Write a Python program to read and print first 10 lines, lines from 50-60 and last 10 lines of the above text file
+
+with open ("lines.txt") as f:
+    for line in (f.readlines()[0:10]):
+        print(line,end ='')
+with open ("lines.txt") as f:
+    for line in (f.readlines()[50:60]):
+        print(line,end ='')
+with open ("lines.txt") as f:        
+    for line in (f.readlines()[-10:]):
+        print(line,end ='')  
+        
+        
+        
+        
+# 3 Write a Python program to append text to above file add 20 more lines into
+
+with open ("lines.txt","a") as f:
+    for txt in  range(101,121):
+        f.write("New Line NO.: "+str(txt) )
+        f.write("\n")        
